@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Color Hunt</string>
+    <string name="gameTitle">Color Hunt</string>
+    <string name="start">Start</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="directions">Choose difficulty:</string>
+    <string name="finalscore">Final Score</string>
+
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scoreLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/trophy" >
+
+    <TextView
+         android:id="@+id/final_score"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:gravity="center_horizontal"
+         android:textColor="@color/headerTextColor"
+         android:textSize="@dimen/inputLabelSize"
+         android:text="@string/finalscore"/>
+    
+    <ListView
+        android:id="@+id/colorList"
+        android:layout_width="116dp"
+        android:layout_height="402dp"
+        android:layout_below = "@+id/final_score" 
+        android:layout_marginLeft="20dp">
+    </ListView>
+    <ListView
+        android:id="@+id/scoreList"
+        android:layout_width="116dp"
+        android:layout_height="401dp"
+        android:layout_toRightOf= "@+id/colorList"
+        android:layout_below = "@+id/final_score" 
+        android:layout_marginLeft="20dp">
+
+    </ListView>
+
+</RelativeLayout>
