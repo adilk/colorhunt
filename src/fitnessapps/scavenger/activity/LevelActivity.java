@@ -296,6 +296,13 @@ public class LevelActivity extends Activity {
 			}
 		}
 	}
+	
+	public void onTakePicture(View view) {
+
+		snapButton.setClickable(false);
+		mCamera.takePicture(null, null, myPictureCallback_JPG);
+
+	}
 
 	private void startPreview() {
 		if (cameraConfigured && mCamera != null) {
@@ -320,6 +327,8 @@ public class LevelActivity extends Activity {
 			startPreview();
 		}
 	};
+	
+	/************* END CAMERA METHODS *********************************/
 
 	/*****************PIXELS AND HISTOGRAM*******************************/
 	
@@ -406,12 +415,16 @@ public class LevelActivity extends Activity {
 	
 	/*****************END PIXELS AND HISTOGRAM*******************************/
 
-	/************* END CAMERA METHODS *********************************/
+	
 
 	public void stopTimer() {
 		countdownTimer.cancel();
 	}
-
+        
+        /**
+         *This is the method that prompts the player to begin their search.
+         * 
+         */
 	public void alertTask() {
 		currentColor = getNewColor();
 		colorImgDrawable = currentColor.getResource();
@@ -521,12 +534,7 @@ public class LevelActivity extends Activity {
 		}
 	}*/
 
-	public void onTakePicture(View view) {
-
-		snapButton.setClickable(false);
-		mCamera.takePicture(null, null, myPictureCallback_JPG);
-
-	}
+	
 	/*
 	private void vibrate() {
 		Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
